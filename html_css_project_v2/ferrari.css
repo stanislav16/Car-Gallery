@@ -1,0 +1,412 @@
+@font-face {
+    font-family: FerroRosso;
+    src: url("fonts/FerroRosso.ttf");
+}
+
+@font-face {
+    font-family: CaviarDreams;
+    src: url("fonts/CaviarDreams.ttf");
+}
+
+@font-face {
+    font-family: Porsche;
+    src: url("fonts/911porschav3.ttf");
+}
+
+@font-face {
+    font-family: BMW;
+    src: url("fonts/BMWHelvetica-Bold.otf");
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("fonts/Manrope-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: RussoOne;
+    src: url("fonts/RussoOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: Mercedes;
+    src: url("fonts/Corporate A Light.ttf");
+}
+@font-face {
+    font-family: Koenigsegg;
+    src: url("fonts/NeographikMTStd.otf");
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url("fonts/HelveticaNeue-Light.otf");
+}
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --first-color:#2C2C2C ;
+    --second-color: #C11B2E;
+    --third-color: #A7A7A7;
+}
+
+body {
+    background-color: var(--first-color);
+    font-family: FerroRosso;
+    animation: transitionIn 0.75s;
+    margin: 0;
+}
+
+.carName {
+    font-family: FerroRosso;
+    font-size: 160px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: var(--second-color);
+    opacity: 40%;
+    width: 923px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    user-select: none;
+}
+
+.photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(.6);
+    transition: all 0.5s;
+}
+
+area:hover + .photo {
+    transform: translate(-50%, -50%) scale(1.02);
+}
+
+
+.topnav {
+    overflow: hidden;
+    vertical-align: bottom;
+    display: block;
+}
+
+.right {
+    float: right;
+    display: flex;
+    margin: 20px;
+    font-size: 25px;
+    vertical-align: center;
+    gap: 40px;
+    transition: all 0.5s;
+}
+
+.koenigsegg {
+    color: var(--third-color);
+    text-decoration: none;
+    font-family: Koenigsegg;
+    margin: 8px;
+    margin-right: 20px;
+    font-style:italic;
+    transition: transform 0.5s;
+}
+.koenigsegg:hover{
+    transform: scale(1.07);
+}
+
+.mercedes {
+    color: var(--third-color);
+    text-decoration: none;
+    font-family: Mercedes;
+    margin: 12px;
+    margin-right: 20px;
+    transition: transform 0.5s;
+}
+.mercedes:hover{
+    transform: scale(1.07);
+}
+
+.bmw {
+    color: var(--third-color);
+    text-decoration: none;
+    font-family: BMW;
+    transition: transform 0.5s;
+}
+.bmw_logo {
+    width: auto;
+    height: 60px;
+}
+
+.bmw:hover{
+    transform: scale(1.07);
+}
+
+.porsche {
+    color: var(--third-color);
+    text-decoration: none;
+    margin: 20px;
+    font-family: Porsche;
+    transition: transform 0.5s;
+}
+.porsche:hover{
+    transform: scale(1.07);
+}
+
+.active {
+    float: left;
+    color: var(--third-color);
+    font-size: 70px;
+    margin-left: 30px;
+    margin-top: 20px;
+    user-select: none;
+    transition: transform 0.5s;
+}
+.active:hover{
+    transform: scale(1.07);
+}
+
+.bottomInfo {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    font-size: 30px;
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+    color: var(--third-color);
+    user-select: none;
+    transition: all 0.5s;
+}
+
+.info {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+}
+
+hr {
+    transform: rotate(20deg);
+    height: 100px;
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+    
+}
+
+.header {
+    height: 100vh;
+}
+.bg1 {
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    background-image: url("photos/812Bg1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.small1 {
+    background-image: url("photos/812Small1.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    height: 260px;
+    width: 450px;
+    position: relative;
+    top: 11vh;
+    left: 65vw;
+    filter: brightness(.8);
+    outline: 3.5px solid #6c6c6c;
+    outline-offset: 18px;
+
+
+}
+.small1:hover{
+    outline-offset: 0;
+}
+.small2{
+    background-image: url("photos/812Small3.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    height: 400px;
+    width: 340px;
+    position: relative;
+    top: 5vh;
+    left: 11vw;
+
+}
+.smallBorder2{
+    height: 400px;
+    width: 340px;
+    border: 3.5px solid var(--third-color);
+    position: relative;
+    top: 15px;
+    left: 25px;
+}
+.smallBorder2:hover{
+    height: 395px;
+    width: 335px;
+    top: 0;
+    left: 0;
+}
+
+
+.bg2 {
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    background-image: url("photos/812Bg3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.quote{
+    font-size: 60px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    top:-17vh;
+    left: 3vw;
+    color: #6c6c6c;
+
+
+}
+.quote:hover{
+    text-shadow: var(--third-color) 5px 5px 10px;
+    cursor: default;
+}
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+}
+.toTop{
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 29px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s;
+    text-decoration: none;
+    color: var(--first-color);
+    background-color: var(--second-color);
+    font-weight: bolder;
+    z-index: 1;
+
+}
+.toTop.active{
+    pointer-events: auto;
+    opacity: .9;
+}
+::selection{
+    background-color: var(--second-color);
+}
+
+@media screen and (max-width: 600px) {
+    .photo {
+        width: 90%;
+        height: auto;
+    }
+
+    .carName {
+        font-size: 100px;
+        width: 500px;
+        text-align: center;
+        height: 300px;
+    }
+    .active{
+        display: none;
+    }
+    .mercedes{
+        text-align: center;
+    }
+    .right {
+        gap: 15px;
+        padding-top: 20px;
+        font-size: 90%;
+    }
+
+    .topnav {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bmw {
+        width: 50%;
+        height: auto;
+        text-align: center;
+    }
+
+    .ferrari {
+        font-size: 30px;
+    }
+
+    .mercedes {
+        margin-top: 2px;
+        font-size: 20px;
+    }
+
+    .bottomInfo {
+        font-size:20px;
+        width: 500px;
+
+    }
+
+    .info {
+        line-height: 40px;
+    }
+
+    .bg2 {
+        background-position: center;
+    }
+
+    .small2 {
+        height: 300px;
+        width: 250px;
+        left: 70px;
+        top:50px;
+    }
+
+    .smallBorder2 {
+        height: 300px;
+        width: 250px;
+
+
+    }
+
+    .smallBorder2:hover {
+        height: 295px;
+        width: 245px;
+    }
+
+    .small1 {
+        display: none;
+    }
+    .quote{
+        top:90px;
+    }
+
+}

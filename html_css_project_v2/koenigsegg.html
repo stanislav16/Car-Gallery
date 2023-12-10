@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="koenigsegg.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="photos/koenigsegg_logo.ico"/>
+
+    <title>Jesko</title>
+</head>
+<body>
+<a href="#" class="toTop">&uarr;</a>
+
+<header class="header">
+    <nav class="topnav">
+        <div class="active">Koenigsegg</div>
+        <div class="right">
+            <a href="mercedes.html" class="mercedes">Mercedes-Benz</a>
+            <a href="bmw.html" class="bmw"><img class="bmw_logo" src="photos/bmw_logo_koenigsegg.png"
+            ></a>
+            <a href="porsche.html" class="porsche">Porsche</a>
+            <a href="ferrari.html" class="ferrari">Ferrari</a>
+        </div>
+
+
+    </nav>
+
+
+    <section>
+        <div class="carName">Koenigsegg Jesko</div>
+        <img src="photos/koenigsegg.png" class="photo" usemap="#photoMap" id="photo">
+        <map name="photoMap">
+            <area id="area" shape="poly"
+                  coords="271,31,227,31,166,28,174,14,159,12,138,14,137,-2,114,-1,97,4,66,15,37,24,24,29,35,42,44,52,62,59,79,58,95,51,104,49,123,54,128,57,100,62,84,68,52,76,35,84,30,100,21,113,21,127,19,149,20,175,28,185,48,191,67,191,95,191,106,195,120,206,138,205,152,208,171,209,191,205,199,194,218,192,252,193,282,193,560,194,576,198,607,210,628,210,646,204,673,194,695,194,724,193,758,186,767,180,756,172,754,160,749,142,731,127,707,108,683,92,663,84,631,77,602,71,571,59,536,46,475,23,435,16,402,14,361,13,323,19">
+        </map>
+        <section class=bottomInfo>
+            <div class="info">
+                <div>Top speed</div>
+                <div>530 km/h</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>0-100 km/h</div>
+                <div>2,6 sec</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>Horsepower</div>
+                <div>1600 hp</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>Torque</div>
+                <div>1500 N⋅m</div>
+            </div>
+
+        </section>
+    </section>
+</header>
+<main class="main">
+    <section class="bg1">
+        <div class="small1 hidden">
+            <div class="smallBorder1 hidden"></div>
+        </div>
+
+    </section>
+    <section class="bg2">
+        <div class="quote hidden">Defying Limits, Redefining Speed</div>
+    </section>
+    <section class="bg3">
+        <div class="small2 hidden">
+            <div class="smallBorder2 hidden"></div>
+        </div>
+        <div class="small3 hidden">
+            <div class="smallBorder3 hidden"></div>
+        </div>
+    </section>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('#area').hover(
+        function () {
+            $('#photo').css('transform', 'translate(-50%, -50%) scale(1.02)');
+        }, function () {
+            $('#photo').css('transform', 'translate(-50%, -50%)');
+        }
+    );
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                console.log(entry)
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        })
+    })
+
+    const hiddenEl = document.querySelectorAll('.hidden');
+    hiddenEl.forEach((el) => observer.observe(el));
+
+    const toTop = document.querySelector('.toTop');
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 400) {
+            toTop.classList.add('active');
+        } else {
+            toTop.classList.remove('active');
+        }
+    })
+</script>
+
+</body>
+</html>

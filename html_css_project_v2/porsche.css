@@ -1,0 +1,450 @@
+@font-face {
+    font-family: FerroRosso;
+    src: url("fonts/FerroRosso.ttf");
+}
+
+@font-face {
+    font-family: CaviarDreams;
+    src: url("fonts/CaviarDreams.ttf");
+}
+
+@font-face {
+    font-family: Porsche;
+    src: url("fonts/911porschav3.ttf");
+}
+
+@font-face {
+    font-family: BMW;
+    src: url("fonts/BMWHelvetica-Bold.otf");
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("fonts/Manrope-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: RussoOne;
+    src: url("fonts/RussoOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: Mercedes;
+    src: url("fonts/Corporate A Light.ttf");
+}
+@font-face {
+    font-family: Koenigsegg;
+    src: url("fonts/NeographikMTStd.otf");
+}
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+:root {
+    --first-color:#202122;
+    --second-color: #E39F0B;
+    --third-color: #98A4AF;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--first-color);
+    font-family: Porsche;
+    animation: transitionIn 0.75s;
+    margin: 0;
+}
+
+.carName {
+    font-family: Porsche;
+    font-size: 120px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: var(--second-color);
+    opacity: 60%;
+    width: 1100px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    user-select: none;
+
+}
+
+.photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(.6);
+    transition: all 0.5s;
+}
+
+area:hover + .photo {
+    transform: translate(-50%, -50%) scale(1.02);
+}
+
+
+.topnav {
+    overflow: hidden;
+    vertical-align: bottom;
+    display: block;
+
+}
+
+.right {
+    float: right;
+    display: flex;
+    margin: 20px;
+    font-size: 25px;
+    vertical-align: center;
+    gap: 40px;
+    transition: all 0.5s;
+}
+
+.koenigsegg {
+    color: var(--third-color);
+    text-decoration: none;
+    font-family: Koenigsegg;
+    margin: 8px;
+    margin-right: 20px;
+    font-style:italic;
+    transition: transform 0.5s;
+}
+.koenigsegg:hover{
+    transform: scale(1.07);
+}
+
+.mercedes {
+    color: var(--third-color);
+    text-decoration: none;
+    font-family: Mercedes;
+    margin: 12px;
+    margin-right: 20px;
+    transition: transform 0.5s;
+}
+.mercedes:hover{
+    transform: scale(1.07);
+}
+
+.bmw {
+    color: var(--third-color);
+    text-decoration: none;
+    font-family: BMW;
+    transition: transform 0.5s;
+}
+.bmw_logo {
+    width: auto;
+    height: 60px;
+}
+
+.bmw:hover{
+    transform: scale(1.07);
+}
+
+.ferrari {
+    color: var(--third-color);
+    text-decoration: none;
+    margin:4px;
+    margin-right: 20px;
+    font-size: 40px;
+    font-family: FerroRosso;
+    transition: transform 0.5s;
+}
+.ferrari:hover{
+    transform: scale(1.07);
+}
+
+.active {
+    float: left;
+    color: var(--third-color);
+    font-size: 50px;
+    margin-left: 30px;
+    margin-top: 20px;
+    user-select: none;
+    transition: transform 0.5s;
+    block-size: min-content;
+}
+.active:hover{
+    transform: scale(1.07);
+}
+
+.bottomInfo {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    font-size: 25px;
+    width: 1200px;
+    align-items: center;
+    justify-content: center;
+    color: var(--third-color);
+    user-select: none;
+    transition: all 0.5s;
+}
+
+.info {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+}
+
+hr {
+    transform: rotate(20deg);
+    height: 100px;
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+}
+.header {
+    height: 100vh;
+}
+.bg1 {
+    height: 120vh;
+    background-size: cover;
+    background-image: url("photos/porscheBg1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.small1 {
+    background-image: url("photos/porscheSmall1.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    height: 220px;
+    width: 400px;
+    position: relative;
+    top: 6vh; /* 60px */
+    left: 5vw; /* 100px */
+}
+
+.smallBorder1 {
+    height: 220px;
+    width: 400px;
+    border: 3.5px solid var(--third-color);
+    position: relative;
+    top:-15px;
+    left: 25px;
+}
+.smallBorder1:hover{
+    top:0;
+    left: 0;
+    height: 215px;
+    width: 395px;
+}
+.quote1 {
+    font-size: 40px;
+    color: #DDE7E9;
+    font-style: italic;
+    position: relative;
+    top: 10vh; /* 100px */
+    left: 24vw; /* 380px */
+    width: 1100px;
+    height: 50px;
+}
+.quote1:hover{
+    text-shadow: #222424 5px 5px 10px;
+    cursor: default;
+}
+.quote2 {
+    font-size: 40px;
+    color: #DDE7E9;
+    font-style: italic;
+    position: relative;
+    top: 70vh; /* 530px */
+    left: 9vw; /* 130px */
+    height: 50px;
+    width: 800px;
+}
+.quote2:hover{
+    text-shadow: #222424 5px 5px 10px;
+    cursor: default;
+}
+.bg2 {
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    background-image: url("photos/porscheBg2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    display: block;
+}
+
+.small2 {
+    background-image: url("photos/porscheSmall2.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    height: 220px;
+    width: 400px;
+    position: relative;
+    top: 50vh; /* 400px */
+    left: 70vw; /* 1080px */
+}
+
+.smallBorder2{
+    height: 220px;
+    width: 400px;
+    border: 3.5px solid var(--third-color);
+    position: relative;
+    top:15px;
+    left: -25px;
+}
+.smallBorder2:hover{
+    top:0;
+    left: 0;
+    height: 215px;
+    width: 395px;
+}
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+}
+.toTop{
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 29px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s;
+    text-decoration: none;
+    color: var(--first-color);
+    background-color: var(--second-color);
+    font-weight: bolder;
+    font-family: FerroRosso;
+    z-index: 1;
+
+}
+.toTop.active{
+    pointer-events: auto;
+    opacity: .9;
+}
+::selection{
+    background-color: var(--second-color);
+}
+@media screen and (max-width: 600px) {
+    .photo {
+        width: 99%;
+        height: auto;
+    }
+
+    .carName {
+        font-size: 100px;
+        width: 580px;
+        text-align: center;
+        height: 240px;
+    }
+
+    .right {
+        gap: 15px;
+        padding-top: 20px;
+        font-size: 90%;
+    }
+
+    .topnav {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .active{
+        display: none;
+    }
+
+    .bmw {
+        width: 50%;
+        height: auto;
+        text-align: center;
+    }
+
+    .ferrari {
+        font-size: 30px;
+    }
+
+    .mercedes {
+        margin-top: 2px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .bottomInfo {
+        font-size: 13px;
+        width: 570px;
+
+    }
+
+    .info {
+        line-height: 40px;
+    }
+
+    .bg2 {
+        background-position: center;
+    }
+    .small1{
+        height: 160px;
+        width: 330px;
+        left: 50px;
+        top:40px;
+    }
+
+    .smallBorder1{
+        height: 160px;
+        width: 330px;
+        top:-15px;
+        left: 25px;
+    }
+    .smallBorder1:hover{
+        height: 155px;
+        width: 325px;
+    }
+    .small2 {
+        height: 260px;
+        width: 230px;
+        left: 300px;
+        top: 500px;
+    }
+
+    .smallBorder2 {
+        height: 260px;
+        width: 230px;
+        top:15px;
+        left: -25px;
+
+    }
+
+    .smallBorder2:hover {
+        height: 255px;
+        width: 225px;
+    }
+
+    .quote1{
+        font-size: 30px;
+        left: 50px;
+        width: 500px;
+        text-align: right;
+    }
+    .quote2{
+        font-size: 30px;
+        left: 40px;
+        width: 300px;
+        top:560px;
+    }
+}
+

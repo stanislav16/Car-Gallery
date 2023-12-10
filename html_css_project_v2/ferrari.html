@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="ferrari.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="photos/ferrari_logo.ico"/>
+    <title>812 Superfast</title>
+</head>
+<body>
+<a href="#" class="toTop">&uarr;</a>
+<header class="header">
+    <nav class="topnav">
+        <div class="active">Ferrari</div>
+        <div class="right">
+            <a href="koenigsegg.html" class="koenigsegg">Koenigsegg</a>
+            <a href="mercedes.html" class="mercedes">Mercedes-Benz</a>
+            <a href="bmw.html" class="bmw"><img src="photos/bmw_logo_ferrari.png" class="bmw_logo"></a>
+            <a href="porsche.html" class="porsche">Porsche</a>
+        </div>
+
+
+    </nav>
+
+
+    <section>
+        <div class="carName">812 Superfast</div>
+        <img src="photos/812.png" class="photo" usemap="#photoMap" id="photo">
+        <map name="photoMap">
+            <area id="area" shape="poly"
+                  coords="196,26,168,30,103,44,64,52,39,53,33,72,25,116,24,140,23,175,54,190,79,193,112,204,147,215,175,211,223,196,260,196,290,196,332,194,381,192,419,192,479,188,513,199,549,204,591,208,648,204,679,197,705,185,718,166,719,134,701,117,672,105,619,84,538,67,486,63,441,48,389,23,330,12,255,13">
+        </map>
+        <section class=bottomInfo>
+            <div class="info">
+                <div>Top speed</div>
+                <div>340 km/h</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>0-100 km/h</div>
+                <div>2,9 sec</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>Horsepower</div>
+                <div>789 hp</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>Torque</div>
+                <div>718 N⋅m</div>
+            </div>
+
+        </section>
+    </section>
+</header>
+
+
+<main class="main">
+    <section class="bg1">
+        <div class="small1 hidden">
+        </div>
+        <div class="quote hidden">
+            Shift to the 12th Dimension
+        </div>
+    </section>
+    <section class="bg2">
+        <div class="small2 hidden">
+            <div class="smallBorder2 hidden"></div>
+        </div>
+    </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('#area').hover(
+        function () {
+            $('#photo').css('transform', 'translate(-50%, -50%) scale(1.02)');
+        }, function () {
+            $('#photo').css('transform', 'translate(-50%, -50%)');
+        }
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                console.log(entry)
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        })
+    })
+
+    const hiddenEl = document.querySelectorAll('.hidden');
+    hiddenEl.forEach((el) => observer.observe(el));
+
+    const toTop = document.querySelector('.toTop');
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 400) {
+            toTop.classList.add('active');
+        } else {
+            toTop.classList.remove('active');
+        }
+    })
+</script>
+
+</body>
+</html>

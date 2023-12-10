@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="porsche.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="photos/porsche_logo.ico"/>
+
+    <title>GT3 RS</title>
+</head>
+<body>
+<a href="#" class="toTop">&uarr;</a>
+
+<header class="header">
+
+    <nav class="topnav">
+        <div class="active">Porsche</div>
+        <div class="right">
+            <a href="ferrari.html" class="ferrari">Ferrari</a>
+            <a href="koenigsegg.html" class="koenigsegg">Koenigsegg</a>
+            <a href="mercedes.html" class="mercedes">Mercedes-Benz</a>
+            <a href="bmw.html" class="bmw"><img src="photos/bmw_logo_porsche.png" class="bmw_logo"></a>
+        </div>
+
+
+    </nav>
+
+
+    <section>
+        <div class="carName">992 GT3 RS</div>
+        <img src="photos/gt3rs.png" class="photo" usemap="#photoMap" id="photo">
+        <map name="photoMap">
+            <area id="area" shape="poly"
+                  coords="264,25,196,39,173,45,157,23,127,15,98,5,34,0,36,18,42,21,66,35,91,32,107,37,114,47,111,68,90,71,68,71,55,92,48,108,42,128,42,156,41,181,60,196,94,207,127,213,163,225,189,227,234,222,265,211,293,210,322,212,348,212,380,212,415,208,452,209,482,209,519,207,545,204,577,208,601,216,626,222,654,226,669,220,695,214,731,208,768,207,786,197,788,177,789,149,774,132,750,114,723,92,698,86,636,76,593,73,569,73,533,60,506,45,458,21,416,11,366,9,303,9">
+        </map>
+        <section class=bottomInfo>
+            <div class="info">
+                <div>Top speed</div>
+                <div>296km/h</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>0-100km/h</div>
+                <div>3,2 sec</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>Horsepower</div>
+                <div>465hp</div>
+            </div>
+            <hr>
+            <div class="info">
+                <div>Torque</div>
+                <div>718 N⋅m</div>
+            </div>
+
+        </section>
+    </section>
+</header>
+<main class="main">
+    <section class="bg1">
+        <div class="small1 hidden">
+            <div class="smallBorder1 hidden"></div>
+        </div>
+        <div class="small2 hidden">
+            <div class="smallBorder2 hidden"></div>
+        </div>
+        <div class="small3 hidden">
+            <div class="smallBorder3 hidden"></div>
+        </div>
+    </section>
+    <section class="bg2">
+        <div class="quote1 hidden">Perfection is never the start.</div>
+        <div class="quote2 hidden">But always the goal.</div>
+    </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('#area').hover(
+        function () {
+            $('#photo').css('transform', 'translate(-50%, -50%) scale(1.02)');
+        }, function () {
+            $('#photo').css('transform', 'translate(-50%, -50%)');
+        }
+    );
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                console.log(entry)
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        })
+    })
+
+    const hiddenEl = document.querySelectorAll('.hidden');
+    hiddenEl.forEach((el) => observer.observe(el));
+
+    const toTop = document.querySelector('.toTop');
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 400) {
+            toTop.classList.add('active');
+        } else {
+            toTop.classList.remove('active');
+        }
+    })
+</script>
+</body>
+</html>
